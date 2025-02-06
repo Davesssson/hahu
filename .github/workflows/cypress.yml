@@ -42,3 +42,4 @@ jobs:
           name: mochawesome-report
           path: mochawesome-report/
           retention-days: 30
+          working-directory: hahu_cypress
