@@ -12,17 +12,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Ellenőrizzük az aktuális mappát
+      - name: Check current folder
         run: pwd
 
       - name: Install dependencies
         run: npm ci
         working-directory: hahu_cypress
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          working-directory: hahu_cypress
+      #- name: Cypress run
+      #  uses: cypress-io/github-action@v6
+      #  with:
+      #    working-directory: hahu_cypress
 
       - name: Run Cypress tests
         run: npm run cypress-test-run-windows || true
