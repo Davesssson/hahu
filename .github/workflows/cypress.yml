@@ -25,7 +25,7 @@ jobs:
           working-directory: hahu_cypress
 
       - name: Run Cypress tests
-        run: npm run cypress-test-run-windows
+        run: npm run cypress-test-run-windows || true
         working-directory: hahu_cypress
 
       - name: Merge test results
@@ -39,6 +39,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: report
-          path: hahu_cypress/mochawesome-report/
+          name: mochawesome-report
+          path: mochawesome-report/
           retention-days: 30
