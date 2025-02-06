@@ -88,6 +88,4 @@ describe(`Registration Page test`, () => {
         the assembled link
    - 4) Based on product expectations the test case could even end here and check the fact that the email is sent out,
         and cover the rest of the flow starting from "clicking" on the confirm email
-
-
 */

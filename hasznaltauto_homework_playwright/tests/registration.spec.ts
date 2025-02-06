@@ -1,7 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
 import {fieldTestData,fieldTestRegistrationData} from '../common/data/field-test-data';
 import { RegisterPage } from './pageobjects/register.page';
-import { EnvironmentVariables } from '../common/config/environment-variables';
 
 let page: Page;
 let registerPage: RegisterPage;

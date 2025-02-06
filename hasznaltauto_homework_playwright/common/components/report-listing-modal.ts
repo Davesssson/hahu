@@ -15,8 +15,6 @@ import { type Locator, Page } from "@playwright/test";
 
     getReportItem(item: string): Locator{
         return this.page.locator(`xpath=//label[@class='error-list__value' and contains(text(),'${item}')]`);
-
     }
-
 
 }
