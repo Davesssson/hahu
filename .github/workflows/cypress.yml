@@ -11,9 +11,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
       - name: Install dependencies
         run: npm ci
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
       - name: Run Cypress tests
         run: npm run cypress-test-run-windows
