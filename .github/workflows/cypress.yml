@@ -40,6 +40,5 @@ jobs:
         if: always()
         with:
           name: mochawesome-report
-          path: mochawesome-report/
+          path: hahu_cypress/mochawesome-report/
           retention-days: 30
-          working-directory: hahu_cypress
