@@ -11,11 +11,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Change directory
-        run: cd hahu_cypress
+
+      - name: Ellenőrizzük az aktuális mappát
+        run: pwd
+
       - name: Install dependencies
         run: npm ci
+        working-directory: hahu_cypress
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with:
+          working-directory: hahu_cypress
+
       - name: Run Cypress tests
         run: npm run cypress-test-run-windows
+        working-directory: hahu_cypress
