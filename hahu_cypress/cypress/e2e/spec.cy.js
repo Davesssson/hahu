@@ -6,6 +6,7 @@ describe("template spec2", () => {
   });
 
   it("second", () => {
+    cy.visit("https://example.cypress.io/");
     expect(false).to.be.true;
   });
 });

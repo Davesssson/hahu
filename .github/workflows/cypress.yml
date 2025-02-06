@@ -27,3 +27,18 @@ jobs:
       - name: Run Cypress tests
         run: npm run cypress-test-run-windows
         working-directory: hahu_cypress
+
+      - name: Merge test results
+        run: npm run merge-results
+        working-directory: hahu_cypress
+
+      - name: Generate report based on results
+        run: npm run generate-report
+        working-directory: hahu_cypress
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report
+          path: hahu_cypress/mochawesome-report/
+          retention-days: 30

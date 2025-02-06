@@ -1,3 +1,6 @@
 node_modules/
 .env
 cypress/screenshots
+cypress/results/
+mochawesome-report/
+mochawesome.json
